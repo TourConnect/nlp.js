@@ -42,21 +42,21 @@
     "bot"
   ],
   "dependencies": {
-    "@nlpjs/builtin-duckling": "^4.23.4",
-    "@nlpjs/builtin-microsoft": "^4.23.4",
-    "@nlpjs/core-loader": "^4.23.4",
-    "@nlpjs/emoji": "^4.23.4",
-    "@nlpjs/evaluator": "^4.22.7",
-    "@nlpjs/lang-all": "^4.24.0",
-    "@nlpjs/language": "^4.22.7",
-    "@nlpjs/neural": "^4.22.7",
-    "@nlpjs/nlg": "^4.23.4",
-    "@nlpjs/nlp": "^4.23.5",
-    "@nlpjs/nlu": "^4.23.5",
-    "@nlpjs/request": "^4.22.7",
-    "@nlpjs/sentiment": "^4.23.4",
-    "@nlpjs/similarity": "^4.22.7",
-    "@nlpjs/xtables": "^4.23.5"
+    "@nlpjs/builtin-duckling": "file:../builtin-duckling",
+    "@nlpjs/builtin-microsoft": "file:../builtin-microsoft",
+    "@nlpjs/core-loader": "file:../core-loader",
+    "@nlpjs/emoji": "file:../emoji",
+    "@nlpjs/evaluator": "file:../evaluator",
+    "@nlpjs/lang-all": "file:../lang-all",
+    "@nlpjs/language": "file:../language",
+    "@nlpjs/neural": "file:../neural",
+    "@nlpjs/nlg": "file:../nlg",
+    "@nlpjs/nlp": "file:../nlp",
+    "@nlpjs/nlu": "file:../nlu",
+    "@nlpjs/request": "file:../request",
+    "@nlpjs/sentiment": "file:../sentiment",
+    "@nlpjs/similarity": "file:../similarity",
+    "@nlpjs/xtables": "file:../xtables"
   },
   "gitHead": "cc4249fa994c58d220e6f10a6c94fdad05df32fd"
 }

@@ -25,9 +25,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@nlpjs/bert-tokenizer": "^4.23.4",
-    "@nlpjs/core": "^4.23.4",
-    "@nlpjs/utils": "^4.24.2",
+    "@nlpjs/bert-tokenizer": "file:../bert-tokenizer",
+    "@nlpjs/core": "file:../core",
+    "@nlpjs/utils": "file:../utils",
     "@tensorflow/tfjs-node": "^3.0.0"
   },
   "publishConfig": {

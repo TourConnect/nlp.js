@@ -25,8 +25,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@nlpjs/evaluator": "^4.22.7",
-    "@nlpjs/lexer": "^4.22.7"
+    "@nlpjs/evaluator": "file:../evaluator",
+    "@nlpjs/lexer": "file:../lexer"
   },
   "gitHead": "cc4249fa994c58d220e6f10a6c94fdad05df32fd"
 }
