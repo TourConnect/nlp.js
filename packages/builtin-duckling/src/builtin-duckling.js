@@ -31,6 +31,7 @@ const cultures = {
   bn: 'bn_BD',
   el: 'el_GR',
   en: 'en_US',
+  gb: 'en_GB',
   hi: 'hi_IN',
   fa: 'fa_IR',
   gl: 'gl_ES',
@@ -93,6 +94,7 @@ class BuiltinDuckling extends Clonable {
       const postData = querystring.stringify({
         text: utterance,
         locale: BuiltinDuckling.getCulture(language),
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone
       });
 
       const options = {
