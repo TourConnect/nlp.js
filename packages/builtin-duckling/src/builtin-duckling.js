@@ -195,11 +195,13 @@ class BuiltinDuckling extends Clonable {
       };
     } else if (entity.dim === 'amount-of-money') {
       result.entity = 'currency';
-      result.resolution = {
-        strValue: entity.value.value.toString(),
-        value: entity.value.value,
-        unit: entity.value.unit,
-      };
+      if (entity.value.unit) {
+        result.resolution = {
+          strValue: entity.value.value.toString(),
+          value: entity.value.value,
+          unit: entity.value.unit,
+        };
+      }
     } else if (entity.dim === 'duration') {
       result.entity = 'duration';
       result.resolution = {
