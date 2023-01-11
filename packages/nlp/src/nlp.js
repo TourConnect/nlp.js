@@ -637,6 +637,7 @@ class Nlp extends Clonable {
   }
 
   async process(locale, utterance, srcContext, settings) {
+    const processSettings = { ...settings };
     let sourceInput;
     let context = srcContext;
     if (typeof locale === 'object') {
@@ -697,7 +698,8 @@ class Nlp extends Clonable {
     if (forceNER || !this.slotManager.isEmpty) {
       const optionalUtterance = await this.ner.generateEntityUtterance(
         output.locale || locale,
-        utterance
+        utterance,
+        processSettings,
       );
       if (optionalUtterance && optionalUtterance !== utterance) {
         const optionalInput = {

@@ -89,12 +89,13 @@ class BuiltinDuckling extends Clonable {
   }
 
   // istanbul ignore next
-  request(utterance, language) {
+  request(utterance, language, settings) {
     return new Promise((resolve, reject) => {
       const postData = querystring.stringify({
         text: utterance,
         locale: BuiltinDuckling.getCulture(language),
-        tz: Intl.DateTimeFormat().resolvedOptions().timeZone
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        ...((settings || {})['builtin-duckling'] || {})
       });
 
       const options = {
@@ -221,9 +222,9 @@ class BuiltinDuckling extends Clonable {
     return entities.map((x) => this.transformEntity(x));
   }
 
-  async findBuiltinEntities(utterance, language) {
+  async findBuiltinEntities(utterance, language, settings) {
     try {
-      const result = await this.request(utterance, language);
+      const result = await this.request(utterance, language, settings);
       return { edges: this.transform(result), source: result };
     } catch (ex) {
       this.logger.error(ex);
@@ -235,7 +236,8 @@ class BuiltinDuckling extends Clonable {
     const input = srcInput;
     const entities = await this.findBuiltinEntities(
       input.text || input.utterance,
-      input.locale
+      input.locale,
+      input.settings,
     );
     if (!input.edges) {
       input.edges = [];

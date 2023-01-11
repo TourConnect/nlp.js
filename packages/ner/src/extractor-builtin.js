@@ -41,6 +41,7 @@ class ExtractorBuiltin {
     const newInput = await extractor.extract({
       text: input.text || input.utterance,
       locale: input.locale,
+      settings: input.settings,
     });
     input.edges = input.edges || [];
     if (newInput.edges) {

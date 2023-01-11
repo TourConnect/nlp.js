@@ -469,10 +469,11 @@ class Ner extends Clonable {
     return result;
   }
 
-  async generateEntityUtterance(locale, utterance) {
+  async generateEntityUtterance(locale, utterance, settings) {
     let input = {
       locale,
       utterance,
+      settings,
     };
     input = await this.process(input);
     const { entities } = input;
