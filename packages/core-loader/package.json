@@ -27,7 +27,9 @@
   "dependencies": {
     "@nlpjs/core": "^4.25.0",
     "@nlpjs/request": "^4.25.0",
-    "@nlpjs/builtin-duckling": "^4.25.0"
+    "@nlpjs/builtin-duckling": "^4.25.0",
+    "@nlpjs/logger": "^4.25.0",
+    "@nlpjs/evaluator": "^4.25.0"
   },
   "gitHead": "cc4249fa994c58d220e6f10a6c94fdad05df32fd"
 }
