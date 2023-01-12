@@ -725,7 +725,7 @@ class Nlp extends Clonable {
     }
     output.context = context;
     if (forceNER || !this.slotManager.isEmpty) {
-      output = await this.ner.process({ ...output });
+      output = await this.ner.process({ ...output, settings: processSettings });
     } else {
       output.entities = [];
       output.sourceEntities = [];
