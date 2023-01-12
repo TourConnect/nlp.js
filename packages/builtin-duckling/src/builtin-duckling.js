@@ -90,12 +90,13 @@ class BuiltinDuckling extends Clonable {
 
   // istanbul ignore next
   request(utterance, language, settings) {
+    const extraSettings = ((settings || {})['builtin-duckling'] || {});
     return new Promise((resolve, reject) => {
       const postData = querystring.stringify({
         text: utterance,
         locale: BuiltinDuckling.getCulture(language),
         tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
-        ...((settings || {})['builtin-duckling'] || {})
+        ...extraSettings,
       });
 
       const options = {
